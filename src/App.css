@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scrollable-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px; /* Optional: to add some space between day columns */
+  padding-bottom: 10px; /* Optional: to ensure there's space at the bottom */
+}
+
+.scrollable-row > div {
+  flex: 0 0 auto; /* This ensures that the child divs (each day) do not shrink and are scrollable */
+}
+
+.active-day {
+  background-color: #f0f0f0; /* You can choose your own color */
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.active-day:hover {
+  background-color: #e0e0e0;
+}
+
